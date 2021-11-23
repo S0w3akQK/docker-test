@@ -10,10 +10,26 @@ jobs:
         name: Checkout repository
 
       - uses: pmorelli92/github-container-registry-build-push@2.0.0
-        name: Build and Publish
+        name: Apple
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
           docker-image-name: badger
           docker-image-tag: apple
-          dockerfile-path: ./Dockerfile
+          dockerfile-path: ./Dockerfile.apple
+
+      - uses: pmorelli92/github-container-registry-build-push@2.0.0
+        name: Banana
+        with:
+          github-push-secret: ${{secrets.GITHUB_TOKEN}}
+          docker-image-name: badger
+          docker-image-tag: banana
+          dockerfile-path: ./Dockerfile.banana
+
+      - uses: pmorelli92/github-container-registry-build-push@2.0.0
+        name: Cherry
+        with:
+          github-push-secret: ${{secrets.GITHUB_TOKEN}}
+          docker-image-name: badger
+          docker-image-tag: cherry
+          dockerfile-path: ./Dockerfile.cherry
 

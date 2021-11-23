@@ -1,0 +1,4 @@
+FROM alpine
+
+RUN mkdir /cherry && cd /cherry && echo cherry >> cherry.txt
+

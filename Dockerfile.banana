@@ -1,0 +1,4 @@
+FROM alpine
+
+RUN mkdir /banana && cd /banana && echo banana >> banana.txt
+
