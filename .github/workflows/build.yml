@@ -13,7 +13,7 @@ jobs:
         name: Build and Publish
         with:
           github-push-secret: ${{secrets.GITHUB_TOKEN}}
-          docker-image-name: docker-build
+          docker-image-name: badger
           docker-image-tag: apple
           dockerfile-path: ./Dockerfile
 
